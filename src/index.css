@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "preline/src/plugins/datepicker/styles.css";
+@import "preline/variants.css";
+@source "../node_modules/preline/dist/*.js";
+
+/* Adds pointer cursor to buttons */
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* Defaults hover styles on all devices */
+@custom-variant hover (&:hover);
+
+
+/* Plugins */
+@plugin "@tailwindcss/forms";
+
+/* Soft multi-blob gradient background (light lime base with blue/purple/pink blobs) */
+.bg-blob-gradient {
+  --bg-base: #f4fadf; /* pale lime */
+  background-color: var(--bg-base);
+  background-image:
+    radial-gradient(45% 40% at 28% 62%, rgba(139, 92, 246, 0.35) 0%, rgba(139, 92, 246, 0) 60%), /* purple */
+    radial-gradient(42% 45% at 42% 52%, rgba(59, 130, 246, 0.33) 0%, rgba(59, 130, 246, 0) 55%),  /* blue */
+    radial-gradient(36% 36% at 62% 22%, rgba(236, 72, 153, 0.32) 0%, rgba(236, 72, 153, 0) 60%);  /* pink */
+  background-repeat: no-repeat;
+}
