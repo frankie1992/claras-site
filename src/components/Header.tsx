@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
+import ContactButton from './ContactButton'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -82,12 +83,7 @@ export default function Header() {
 
           {/* Right actions (contact on desktop, hamburger on mobile) */}
           <div className="justify-self-end flex items-center">
-            <button
-              type="button"
-              className="hidden md:inline-flex py-1.5 px-3 items-center gap-x-2 text-sm font-medium text-nowrap rounded-xl border border-transparent bg-rose-500 text-white hover:bg-rose-600 focus:outline-hidden transition disabled:opacity-50 disabled:pointer-events-none"
-            >
-              contact
-            </button>
+            <ContactButton/>
 
             {/* Mobile toggle */}
             <button

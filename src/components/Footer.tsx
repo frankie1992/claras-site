@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
 
         <a
-          href="https://github.com/francisco-miranda"
+          href="https://github.com/frankie1992"
           target="_blank"
           rel="noreferrer noopener"
           className="text-blue-600 hover:underline"
