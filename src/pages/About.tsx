@@ -1,4 +1,6 @@
-import portrait from '../assets/home-page/clara-pencil-portrait.png'
+import portrait from '../assets/about-page/clara-portrait.png'
+import flowerWashi from '../assets/about-page/flower-washitape.svg'
+
 import {
   ABOUT_PAGE_TITLE,
   ABOUT_INTRO_LINE,
@@ -11,6 +13,7 @@ import { LeafIcon } from '../utils/icons'
 
 export default function About() {
   return (
+    <>
     <section className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-12 md:py-16">
       <h1 className="text-center text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-10 md:mb-14">
         {ABOUT_PAGE_TITLE}
@@ -45,6 +48,15 @@ export default function About() {
           </div>
         </div>
       </div>
-    </section >
+    </section>
+    {/* Full‑bleed white strip with repeating flower washi */}
+    <div className="bg-white mx-[calc(50%-50vw)] w-screen">
+      <div
+        className="h-10 bg-repeat-x bg-center"
+        style={{ backgroundImage: `url(${flowerWashi})`, backgroundSize: 'auto 100%' }}
+        aria-hidden
+      />
+    </div>
+    </>
   )
 }
