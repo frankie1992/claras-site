@@ -21,7 +21,7 @@ export default function UBYouProject() {
   return (
     <div className="flex flex-col min-h-[60vh]">
       {/* Hero with site gradient */}
-      <section className="relative bg-blob-gradient overflow-hidden">
+      <section className="relative overflow-hidden">
         {/* Decorative shapes */}
         <img
           src={backgroundHalfCircle}

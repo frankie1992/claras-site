@@ -146,7 +146,7 @@ export const PORTFOLIO_PROJECTS_LIST: ProjectDetails[] = [
     description:
       'A mobile app that helps users discover local events and groups, using gamification to boost event turnout.',
     imageSrc: gatherly,
-    projectLink: '#',
+    projectLink: '/projects/gatherly',
   },
   {
     title: 'CityPups: A Dog Adoption Website Design Sprint',
