@@ -15,7 +15,7 @@ export default function Home() {
         {/* Portrait with selection-style frame */}
         <div className="relative">
           {/* Name label (top-left) */}
-          <a href="#" className="absolute -top-5 left-0 text-sky-700 text-sm hover:underline">{HOME_NAME_LABEL}</a>
+
 
           {/* Image */}
           <img
@@ -25,19 +25,7 @@ export default function Home() {
             draggable={false}
           />
 
-          {/* Blue outline box */}
-          <div className="pointer-events-none absolute inset-0 border border-sky-400" aria-hidden="true" />
 
-          {/* Corner squares */}
-          <span className="pointer-events-none absolute -top-1.5 -left-1.5 w-3 h-3 bg-sky-300 rounded-sm border border-white" aria-hidden="true" />
-          <span className="pointer-events-none absolute -top-1.5 -right-1.5 w-3 h-3 bg-sky-300 rounded-sm border border-white" aria-hidden="true" />
-          <span className="pointer-events-none absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-sky-300 rounded-sm border border-white" aria-hidden="true" />
-          <span className="pointer-events-none absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-sky-300 rounded-sm border border-white" aria-hidden="true" />
-
-          {/* Green closing tag (top-right) */}
-          <span className="pointer-events-none absolute -top-3 -right-3 inline-flex items-center justify-center rounded-md bg-emerald-500 text-white p-1 shadow" aria-hidden="true">
-            <CodeIcon />
-          </span>
         </div>
 
         {/* Intro */}
