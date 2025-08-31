@@ -1,7 +1,7 @@
 import { DnaIcon } from './icons'
 import type { ComponentType } from 'react'
 import { PaletteIcon, type IconProps, StethoscopeIcon } from './icons'
-import cityPups from '../assets/home-page/CityPups.png'
+import cityPups from '../assets/home-page/cityPups.png'
 import ubYou from '../assets/home-page/ubYou.png'
 import gatherly from '../assets/home-page/gatherly.png'
 
