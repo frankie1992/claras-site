@@ -72,18 +72,6 @@ export default function ContactButton() {
 
                 {/* Message editor */}
                 <div className="rounded-xl border border-slate-200 bg-white">
-                  {/* Toolbar */}
-                  <div className="flex items-center gap-2 px-2.5 py-2 border-b border-slate-200 text-slate-500 bg-white">
-                    {[CONTACT_TOOLBAR_BOLD, CONTACT_TOOLBAR_ITALIC, CONTACT_TOOLBAR_UNDERLINE].map((t) => (
-                      <button key={t} type="button" className="px-2 py-1 rounded hover:bg-slate-100">
-                        <span className="text-sm font-medium">{t}</span>
-                      </button>
-                    ))}
-                    <span className="mx-1 h-4 w-px bg-slate-200" />
-                    <button type="button" className="px-2 py-1 rounded hover:bg-slate-100" aria-label={CONTACT_TOOLBAR_BULLETS_ARIA}>•</button>
-                    <button type="button" className="px-2 py-1 rounded hover:bg-slate-100" aria-label={CONTACT_TOOLBAR_LINK_ARIA}>🔗</button>
-                    <button type="button" className="px-2 py-1 rounded hover:bg-slate-100" aria-label={CONTACT_TOOLBAR_CODE_ARIA}>{`</>`}</button>
-                  </div>
                   {/* Textarea */}
                   <textarea
                     rows={5}
