@@ -25,6 +25,18 @@ export default function App() {
     initPreline()
   }, [location.pathname])
 
+  // Smooth scroll to hash targets like /#portfolio
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '')
+      const el = document.getElementById(id)
+      if (el) {
+        // Allow route paint, then scroll
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 0)
+      }
+    }
+  }, [location.hash])
+
   return (
     <div className="min-h-screen flex flex-col bg-blob-gradient">
       <Header />

@@ -43,7 +43,7 @@ export default function Header() {
               <HeartIcon className="size-4 text-slate-500 group-hover:text-slate-700" />
               <span>{NAV_HOME_LABEL}</span>
             </NavLink>
-            <NavLink to="/portfolio" className={linkClass}>
+            <NavLink to="/#portfolio" className={linkClass}>
               <BriefcaseIcon className="size-4 text-slate-500 group-hover:text-slate-700" />
               <span>{NAV_PORTFOLIO_LABEL}</span>
             </NavLink>
@@ -90,7 +90,7 @@ export default function Header() {
           <NavLink to="/" end className={linkClass}>
             {NAV_MOBILE_HOME_LABEL}
           </NavLink>
-          <NavLink to="/portfolio" className={linkClass}>
+          <NavLink to="/#portfolio" className={linkClass}>
             {NAV_MOBILE_PORTFOLIO_LABEL}
           </NavLink>
           <NavLink to="/about" className={linkClass}>

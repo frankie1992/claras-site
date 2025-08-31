@@ -1,4 +1,4 @@
-import portrait from '../assets/clara-portrait.png'
+import portrait from '../assets/home-page/clara-pencil-portrait.png'
 import {
   ABOUT_PAGE_TITLE,
   ABOUT_INTRO_LINE,
@@ -17,7 +17,6 @@ export default function About() {
       </h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-        {/* Portrait PNG with transparent flower cutout + soft glow */}
         <div className="relative w-full max-w-lg mx-auto lg:mx-0">
           <div className="absolute -inset-6 rounded-[48px] bg-gradient-to-br from-fuchsia-300/40 via-sky-300/30 to-emerald-200/40 blur-2xl -z-10" />
           <img
@@ -28,7 +27,6 @@ export default function About() {
           />
         </div>
 
-        {/* Copy */}
         <div className="max-w-2xl mx-auto lg:mx-0 text-center space-y-6 text-slate-700">
           <p>{ABOUT_INTRO_LINE}</p>
           <p>

@@ -1,6 +1,9 @@
 import { DnaIcon } from './icons'
 import type { ComponentType } from 'react'
 import { PaletteIcon, type IconProps, StethoscopeIcon } from './icons'
+import cityPups from '../assets/home-page/CityPups.png'
+import ubYou from '../assets/home-page/ubYou.png'
+import gatherly from '../assets/home-page/gatherly.png'
 
 // Centralized user-facing copy and content constants
 // Use these in components/pages instead of hardcoded strings.
@@ -117,5 +120,40 @@ export const TIMELINE_ITEMS: TimelineEntry[] = [
     iconBgClassName: 'bg-amber-50',
     title: 'Applied Concepts',
     subtitle: 'UI/UX Design Engineer',
+  },
+]
+
+export type ProjectDetails = {
+  title: string
+  subtitle?: string
+  description?: string
+  imageSrc?: string
+  projectLink?: string
+}
+
+export const PORTFOLIO_PROJECTS_LIST: ProjectDetails[] = [
+  {
+    title: 'UBYou: Mental Health for College Students',
+    subtitle: 'Mobile Application',
+    description:
+      'A redesigned mental health app for college students, completed during a 2‑month internship with a team of 5 designers and the CEO.',
+    imageSrc: ubYou,
+    projectLink: '#',
+  },
+  {
+    title: 'Gatherly: A Social Event Application',
+    subtitle: 'Mobile Application',
+    description:
+      'A mobile app that helps users discover local events and groups, using gamification to boost event turnout.',
+    imageSrc: gatherly,
+    projectLink: '#',
+  },
+  {
+    title: 'CityPups: A Dog Adoption Website Design Sprint',
+    subtitle: 'Desktop Website',
+    description:
+      'A 5‑day Google Ventures design sprint creating a dog adoption site for busy city individuals through rapid prototyping and iteration.',
+    imageSrc: cityPups,
+    projectLink: '#',
   },
 ]
