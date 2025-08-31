@@ -138,7 +138,7 @@ export const PORTFOLIO_PROJECTS_LIST: ProjectDetails[] = [
     description:
       'A redesigned mental health app for college students, completed during a 2‑month internship with a team of 5 designers and the CEO.',
     imageSrc: ubYou,
-    projectLink: '#',
+    projectLink: '/projects/ubyou',
   },
   {
     title: 'Gatherly: A Social Event Application',
