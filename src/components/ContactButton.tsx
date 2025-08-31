@@ -1,3 +1,20 @@
+import {
+  CONTACT_BUTTON_LABEL,
+  CONTACT_MODAL_TITLE,
+  CONTACT_EMAIL_LABEL,
+  CONTACT_EMAIL_PLACEHOLDER,
+  CONTACT_MESSAGE_PLACEHOLDER,
+  CONTACT_CANCEL_BUTTON,
+  CONTACT_SEND_BUTTON,
+  CONTACT_TOOLBAR_BOLD,
+  CONTACT_TOOLBAR_ITALIC,
+  CONTACT_TOOLBAR_UNDERLINE,
+  CONTACT_TOOLBAR_BULLETS_ARIA,
+  CONTACT_TOOLBAR_LINK_ARIA,
+  CONTACT_TOOLBAR_CODE_ARIA,
+} from '../utils/Constants'
+import { XIcon } from '../utils/icons'
+
 export default function ContactButton() {
     return (
       <div>
@@ -6,7 +23,7 @@ export default function ContactButton() {
           data-hs-overlay="#hs-basic-modal"
           className="hidden md:inline-flex py-1.5 px-3 items-center gap-x-2 text-sm font-medium text-nowrap rounded-xl border border-transparent bg-rose-500 text-white hover:bg-rose-600 focus:outline-hidden transition disabled:opacity-50 disabled:pointer-events-none"
         >
-          contact
+          {CONTACT_BUTTON_LABEL}
         </button>
 
         <div
@@ -20,7 +37,7 @@ export default function ContactButton() {
               {/* Header */}
               <div className="relative px-6 py-4 bg-lime-50">
                 <h3 id="hs-basic-modal-label" className="text-center font-semibold text-slate-900">
-                  let’s connect!
+                  {CONTACT_MODAL_TITLE}
                 </h3>
                 <button
                   type="button"
@@ -28,10 +45,7 @@ export default function ContactButton() {
                   data-hs-overlay="#hs-basic-modal"
                   className="absolute right-3 top-3 inline-flex size-8 items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200"
                 >
-                  <svg className="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M18 6 6 18" />
-                    <path d="M6 6l12 12" />
-                  </svg>
+                  <XIcon className="size-4" />
                 </button>
               </div>
 
@@ -39,7 +53,7 @@ export default function ContactButton() {
               <form className="px-6 py-4 space-y-4 bg-lime-50">
                 {/* Email */}
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">E-mail</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">{CONTACT_EMAIL_LABEL}</label>
                   <div className="relative">
                     <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400" aria-hidden="true">
                       <svg className="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -50,7 +64,7 @@ export default function ContactButton() {
                     <input
                       type="email"
                       required
-                      placeholder="you@email.com"
+                      placeholder={CONTACT_EMAIL_PLACEHOLDER}
                       className="w-full rounded-lg border border-slate-200 bg-white pl-9 pr-3 py-2 text-slate-900 placeholder-slate-400 outline-none focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
                     />
                   </div>
@@ -60,20 +74,20 @@ export default function ContactButton() {
                 <div className="rounded-xl border border-slate-200 bg-white">
                   {/* Toolbar */}
                   <div className="flex items-center gap-2 px-2.5 py-2 border-b border-slate-200 text-slate-500 bg-white">
-                    {['B','I','U'].map((t) => (
+                    {[CONTACT_TOOLBAR_BOLD, CONTACT_TOOLBAR_ITALIC, CONTACT_TOOLBAR_UNDERLINE].map((t) => (
                       <button key={t} type="button" className="px-2 py-1 rounded hover:bg-slate-100">
                         <span className="text-sm font-medium">{t}</span>
                       </button>
                     ))}
                     <span className="mx-1 h-4 w-px bg-slate-200" />
-                    <button type="button" className="px-2 py-1 rounded hover:bg-slate-100" aria-label="Bulleted list">•</button>
-                    <button type="button" className="px-2 py-1 rounded hover:bg-slate-100" aria-label="Link">🔗</button>
-                    <button type="button" className="px-2 py-1 rounded hover:bg-slate-100" aria-label="Code">{`</>`}</button>
+                    <button type="button" className="px-2 py-1 rounded hover:bg-slate-100" aria-label={CONTACT_TOOLBAR_BULLETS_ARIA}>•</button>
+                    <button type="button" className="px-2 py-1 rounded hover:bg-slate-100" aria-label={CONTACT_TOOLBAR_LINK_ARIA}>🔗</button>
+                    <button type="button" className="px-2 py-1 rounded hover:bg-slate-100" aria-label={CONTACT_TOOLBAR_CODE_ARIA}>{`</>`}</button>
                   </div>
                   {/* Textarea */}
                   <textarea
                     rows={5}
-                    placeholder="Type your message"
+                    placeholder={CONTACT_MESSAGE_PLACEHOLDER}
                     className="w-full resize-y p-3 outline-none rounded-b-xl bg-white"
                   />
                 </div>
@@ -86,14 +100,14 @@ export default function ContactButton() {
                   data-hs-overlay="#hs-basic-modal"
                   className="px-3.5 py-2 rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-100"
                 >
-                  Cancel
+                  {CONTACT_CANCEL_BUTTON}
                 </button>
                 <button
                   type="submit"
                   form=""
                   className="px-3.5 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
                 >
-                  Send
+                  {CONTACT_SEND_BUTTON}
                 </button>
               </div>
             </div>
