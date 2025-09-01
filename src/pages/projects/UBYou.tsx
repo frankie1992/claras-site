@@ -251,7 +251,7 @@ export default function UBYouProject() {
         <p className="">
           The next steps for UBYou include pushing these designs into production on the software side, and conducting formal user testing to iterate on our designs for further improvements. They will conduct A/B testing of our different versions to see which one yields improved user engagement before rolling out into final production.
           Thank you so much to UBYou for allowing us to help redesign your application.        </p>
-        <h3 className="text-center font-bold">
+        <h3 className="text-center font-bold pt-2">
           Thank you so much to UBYou for allowing us to help redesign your application.
         </h3>
       </ProjectItem>

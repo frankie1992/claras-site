@@ -70,12 +70,12 @@ export default function GatherlyProject() {
       <hr className="border-slate-400" />
       {/* Solution */}
       <ProjectItem title="Solution">
-        <p className="font-bold">
+        <p className="font-bold text-center">
           A platform that combines event discovery with meaningful social connections and an in-app badge system to incentivize attendance.
         </p>
-        <div className="flex justify-center"><img src={solution1} alt="SWOT analysis" className="w-full max-w-5xl rounded-xl ring-1 ring-slate-200/60" /></div>
-        <div className="flex justify-center"><img src={solution2} alt="SWOT analysis" className="w-full max-w-5xl rounded-xl ring-1 ring-slate-200/60" /></div>
-        <div className="flex justify-center"><img src={solution3} alt="SWOT analysis" className="w-full max-w-5xl rounded-xl ring-1 ring-slate-200/60" /></div>
+        <div className="flex justify-center"><img src={solution1} alt="SWOT analysis" className="w-full max-w-5xl" /></div>
+        <div className="flex justify-center"><img src={solution2} alt="SWOT analysis" className="w-full max-w-5xl" /></div>
+        <div className="flex justify-center"><img src={solution3} alt="SWOT analysis" className="w-full max-w-4xl" /></div>
       </ProjectItem>
 
       <hr className="border-slate-400" />
@@ -85,7 +85,17 @@ export default function GatherlyProject() {
           Supportive social experiences on a platform such as personalized group and event recommendations based on user interest have been correlated with improved user engagement and attendance at events on social platforms
         </p>
         <p className="text-center">
+          <a className="text-blue-600 underline decoration-blue-600 hover:opacity-80 focus:outline-hidden focus:opacity-80" href="https://marketer.co/blog/personalization">
+            source
+          </a>
+        </p>
+        <p className="text-center">
           Other social media metrics such as “likes” and friend counts can make users feel depressed when using social media to connect with others
+        </p>
+        <p className="text-center">
+          <a className="text-blue-600 underline decoration-blue-600 hover:opacity-80 focus:outline-hidden focus:opacity-80" href="https://www.verywellmind.com/link-between-social-media-and-mental-health-5089347">
+            source
+          </a>
         </p>
       </ProjectItem>
 
@@ -94,7 +104,7 @@ export default function GatherlyProject() {
       <ProjectItem title="Research Synthesis">
         <p className="text-center">
           As a result of my secondary analysis and competitive usability tests, I came up with an affinity map that revealed 5 core features that make an event application successful. ​          </p>
-        <div className="flex justify-center"><img src={affinity} alt="Affinity mapping" className="w-full max-w-5xl rounded-xl ring-1 ring-slate-200/60" /></div>
+        <div className="flex justify-center"><img src={affinity} alt="Affinity mapping" className="w-full max-w-5xl " /></div>
       </ProjectItem>
 
       <hr className="border-slate-400" />
@@ -103,11 +113,13 @@ export default function GatherlyProject() {
         <p className="text-center font-bold">
           Each competitor lacked at least one crucial theme that my affinity map defined.
         </p>
-        <div className="flex justify-center"><img src={competitors} alt="Competitor apps" className="w-full max-w-5xl rounded-xl ring-1 ring-slate-200/60" /></div>
+        <div className="flex justify-center"><img src={competitors} alt="Competitor apps" className="w-full max-w-5xl " /></div>
         <p className="text-center">
-          I conducted a SWOT analysis of each competitor in order to identify their weaknesses. The primary theme that each competitor seemed to lack was in app incentives/gamification to increase user engagement and improve user conversion rates for event attendance. This insight laid the foundation for a new solution to improve user turnout for events.
+          I conducted a SWOT analysis of each competitor in order to identify their weaknesses.
+          <strong> The primary theme that each competitor seemed to lack was in app incentives/gamification</strong>
+          to increase user engagement and improve user conversion rates for event attendance. This insight laid the foundation for a new solution to improve user turnout for events.
         </p>
-        <div className="flex justify-center"><img src={swot} alt="SWOT analysis" className="w-full max-w-5xl rounded-xl ring-1 ring-slate-200/60" /></div>
+        <div className="flex justify-center"><img src={swot} alt="SWOT analysis" className="w-full max-w-5xl " /></div>
       </ProjectItem>
 
       <hr className="border-slate-400" />
@@ -117,19 +129,30 @@ export default function GatherlyProject() {
           After analyzing the competition and synthesizing my research, I came up with 4 'How Might We' questions and provided answers to further explore a possible solution to this issue.
         </p>
         <ul className="list-disc pl-5 space-y-2">
-          How might we foster a sense of community and connection to encourage users to attend events?
-          <li>Focus on leveraging features like event group chats or “connections” to create a sense of belonging and commitment before the event.</li>
-          How might we improve user safety and trust to reduce hesitation in attending events?
+          <div className='font-bold text-center'>
+            How might we foster a sense of community and connection to encourage users to attend events?
+          </div>
+          <li>
+            Focus on leveraging features like event group chats or “connections” to create a sense of belonging and commitment before the event.
+          </li>
+          <div className='font-bold text-center'>
+            How might we improve user safety and trust to reduce hesitation in attending events?
+          </div>
           <li>
             Consider low-cost methods like a verification process or “event buddies” to help users feel safer, thus increasing their likelihood of showing up.
           </li>
 
-          How might we motivate users to commit to attending events through simple, cost-effective gamification?
+          <div className='font-bold text-center'>
+            How might we motivate users to commit to attending events through simple, cost-effective gamification?
+          </div>
 
           <li>
             Implement low-cost rewards, such as badges or points, for RSVP or attendance, encouraging users to follow through with their commitments.
           </li>
-          How might we reduce users’ social anxiety around attending events by providing supportive features?
+
+          <div className='font-bold text-center'>
+            How might we reduce users’ social anxiety around attending events by providing supportive features?
+          </div>
 
           <li>
             Offer supportive tools, like pre-event group chats or connections with other attendees, to help ease social anxiety and increase comfort levels around attending events.
@@ -141,11 +164,14 @@ export default function GatherlyProject() {
       <hr className="border-slate-400" />
       {/* Ideation */}
       <ProjectItem title="Ideation">
+        <p className="text-center py-2">
+          In order to produce a minimal viable product, I decided to design 4 main user flows for the application.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex justify-center"><img src={userFlow1} alt="User flow 1" className="w-full max-w-md rounded-xl ring-1 ring-slate-200/60" /></div>
-          <div className="flex justify-center"><img src={userFlow2} alt="User flow 2" className="w-full max-w-md rounded-xl ring-1 ring-slate-200/60" /></div>
-          <div className="flex justify-center"><img src={userFlow3} alt="User flow 3" className="w-full max-w-md rounded-xl ring-1 ring-slate-200/60" /></div>
-          <div className="flex justify-center"><img src={userFlow4} alt="User flow 4" className="w-full max-w-md rounded-xl ring-1 ring-slate-200/60" /></div>
+          <div className="flex justify-center"><img src={userFlow1} alt="User flow 1" className="w-full max-w-md " /></div>
+          <div className="flex justify-center"><img src={userFlow2} alt="User flow 2" className="w-full max-w-md " /></div>
+          <div className="flex justify-center"><img src={userFlow3} alt="User flow 3" className="w-full max-w-md " /></div>
+          <div className="flex justify-center"><img src={userFlow4} alt="User flow 4" className="w-full max-w-md " /></div>
         </div>
       </ProjectItem>
 
@@ -153,10 +179,13 @@ export default function GatherlyProject() {
 
       {/* Iterations */}
       <ProjectItem title="Iterations">
+        <p className="text-center py-2">
+          I made the following changes to my application based off of 2 rounds of interviews and feedback from my mentor.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
-          <div className="flex justify-center"><img src={iterations1} alt="Iterations 1" className="w-full max-w-6xl rounded-xl ring-1 ring-slate-200/60" /></div>
-          <div className="flex justify-center"><img src={iterations2} alt="Iterations 2" className="w-full max-w-6xl rounded-xl ring-1 ring-slate-200/60" /></div>
-          <div className="flex justify-center"><img src={iterations3} alt="Iterations 3" className="w-full max-w-6xl rounded-xl ring-1 ring-slate-200/60" /></div>
+          <div className="flex justify-center"><img src={iterations1} alt="Iterations 1" className="w-full max-w-6xl " /></div>
+          <div className="flex justify-center"><img src={iterations2} alt="Iterations 2" className="w-full max-w-6xl " /></div>
+          <div className="flex justify-center"><img src={iterations3} alt="Iterations 3" className="w-full max-w-6xl " /></div>
         </div>
       </ProjectItem>
 
@@ -165,7 +194,7 @@ export default function GatherlyProject() {
       {/* Final Screens */}
       <ProjectItem title="The Final Screens">
         <div className="flex justify-center">
-          <img src={finalScreens} alt="Gatherly final screens" className="w-full max-w-5xl h-auto rounded-xl ring-1 ring-slate-200/60" />
+          <img src={finalScreens} alt="Gatherly final screens" className="w-full max-w-5xl h-auto " />
         </div>
       </ProjectItem>
 
@@ -173,25 +202,25 @@ export default function GatherlyProject() {
       {/* Style Guide */}
       <ProjectItem title="Style Guide">
         <div className="flex justify-center">
-          <img src={styleGuide} alt="Style guide" className="w-full max-w-5xl h-auto rounded-xl ring-1 ring-slate-200/60" />
+          <img src={styleGuide} alt="Style guide" className="w-full max-w-5xl h-auto " />
         </div>
       </ProjectItem>
 
       <hr className="border-slate-400" />
       {/* Conclusions + Takeaways */}
       <ProjectItem title="Conclusions + Takeaways">
-        <p>
+        <p className="pb-4">
           For this being my 3rd design project (design sprint included), I feel very proud about this application. My bootcamp gave us free reign on how to tackle this project, and did not really hold our hands this time around  in order to prepare us for real company projects. Despite me feeling accomplished though, there is always some room for improvement. Here is what I would do differently next time:
         </p>
         <ol type="1">
           <li>
-            1. I would spend more time on competitive analysis: Although I feel that I did an adequate job on my competitive analysis, if I had more time I would have mapped out each competitor flow that I wanted to replicate in my design in order to see if there is any overlap that I could carry over into my design.
+            <strong>1. I would spend more time on competitive analysis:</strong> Although I feel that I did an adequate job on my competitive analysis, if I had more time I would have mapped out each competitor flow that I wanted to replicate in my design in order to see if there is any overlap that I could carry over into my design.
           </li>
           <li>
-            2. I would have conducted user interviews: This may sound scary that I didn't conduct and user interviews during the research phase of my project- but I felt that there was enough secondary research already out there to start a project. Looking back now though- I think I would have saved myself some headache on the gamification features if I had talked to users prior to designing a solution.
+            <strong>2. I would have conducted user interviews:</strong> This may sound scary that I didn't conduct and user interviews during the research phase of my project- but I felt that there was enough secondary research already out there to start a project. Looking back now though- I think I would have saved myself some headache on the gamification features if I had talked to users prior to designing a solution.
           </li>
           <li>
-            3. I would have spent more time on my user flows: I feel that my user flows are good enough for a minimal viable product, but this goes back to my previous point that I think if I had conducted user interviews prior to designing a solution I probably would have gotten more unique ideas to design for my product. I'm still very much happy with my end product though.
+            <strong>3. I would have spent more time on my user flows:</strong> I feel that my user flows are good enough for a minimal viable product, but this goes back to my previous point that I think if I had conducted user interviews prior to designing a solution I probably would have gotten more unique ideas to design for my product. I'm still very much happy with my end product though.
           </li>
         </ol>
       </ProjectItem>
