@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import backgroundCross from '../../assets/projects/ubyou/background-cross.svg'
-import backgroundHalfCircle from '../../assets/home-page/background-half-circle.svg'
 import heroMobiles from '../../assets/projects/ubyou/ubyou-mobile.png'
 import oldMobiles from '../../assets/projects/ubyou/uboyu-mobile-old.png'
 import newMobiles from '../../assets/projects/ubyou/uboyu-mobile-new.png'
@@ -24,21 +23,15 @@ export default function UBYouProject() {
       <section className="relative overflow-hidden">
         {/* Decorative shapes */}
         <img
-          src={backgroundHalfCircle}
-          alt=""
-          aria-hidden
-          className="hidden md:block pointer-events-none select-none absolute left-[-28px] top-8 w-44 lg:w-64 opacity-90"
-        />
-        <img
           src={backgroundCross}
           alt=""
           aria-hidden
-          className="hidden md:block pointer-events-none select-none absolute right-6 top-10 w-24 opacity-80"
+          className="hidden md:block pointer-events-none select-none absolute right-8 top-10 w-24 opacity-80"
         />
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-12 md:py-16">
           <div className="text-center mb-8 md:mb-10">
             <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-              UBYou:
+              <div>UBYou:</div>
               <br className="sm:hidden" />
               <span className="ml-2">Mental Wellness for College Students</span>
             </h1>
@@ -53,29 +46,33 @@ export default function UBYouProject() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-8 md:py-10">
           <p className="text-sm text-slate-500 mb-3">Logistics</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:auto-rows-auto">
+            {/* Row 1 */}
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-2">Timeline</h3>
-              <ul className="list-disc list-inside text-slate-700">
+              <ul className="list-disc list-inside inline-block text-left text-slate-700">
                 <li>January – February 2025</li>
               </ul>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-2">Team</h3>
-              <ul className="list-disc list-inside text-slate-700">
+              <ul className="list-disc list-inside inline-block text-left text-slate-700">
                 <li>2 UX Design Leads</li>
                 <li>3 UX Designers</li>
                 <li>+ CEO</li>
               </ul>
             </div>
+            {/* Row 2 */}
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Project Type</h3>
+              <ul className="list-disc list-inside inline-block text-left text-slate-700">
+                <li>Internship</li>
+              </ul>
+            </div>
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-2">My Role</h3>
-              <ul className="list-disc list-inside text-slate-700">
+              <ul className="list-disc list-inside inline-block text-left text-slate-700">
                 <li>UI/UX Designer</li>
-              </ul>
-              <h3 className="text-xl font-semibold text-slate-900 mt-6 mb-2">Project Type</h3>
-              <ul className="list-disc list-inside text-slate-700">
-                <li>Internship</li>
               </ul>
             </div>
           </div>
@@ -298,11 +295,7 @@ export default function UBYouProject() {
 
       <hr className="border-slate-200" />
 
-      {/* Spacer to footer */}
-      <div className="bg-white h-6" />
-
-      {/* Optional back link */}
-      <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 pb-8">
+      <div className=" bg-white h-6 text-center ">
         <Link to="/" className="text-blue-600 hover:underline">← Back to Home</Link>
       </div>
 

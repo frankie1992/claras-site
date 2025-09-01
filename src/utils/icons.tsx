@@ -132,7 +132,7 @@ export function CodeIcon({ className = 'size-3.5', title, ...props }: IconProps)
   )
 }
 
-export function LeafIcon({ className = 'size-6', title, ...props }: IconProps) {
+export function LeafIcon({ className = 'size-8', title, ...props }: IconProps) {
   return (
     <svg
       viewBox="0 0 30 46"
