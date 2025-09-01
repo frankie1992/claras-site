@@ -10,87 +10,110 @@ import sketch from '../../assets/projects/cityPups/sketch.png'
 import solutionSketch from '../../assets/projects/cityPups/Solution-Sketch.png'
 import storyboard from '../../assets/projects/cityPups/StoryBoarding.png'
 import finalScreen from '../../assets/projects/cityPups/final-screen.png'
+import ProjectHero from '../../components/ProjectHero';
+import ProjectItem from '../../components/ProjectItem';
 
 export default function CityPupsProject() {
   return (
     <div className="flex flex-col min-h-[60vh]">
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <img src={backgroundHalfCircle} alt="" aria-hidden className="hidden md:block absolute left-[-28px] top-8 w-44 lg:w-64 pointer-events-none select-none opacity-90" />
-        <img src={backgroundDots} alt="" aria-hidden className="hidden md:block absolute right-6 top-10 w-40 pointer-events-none select-none opacity-90" />
-        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-12 md:py-16">
-          <div className="text-center mb-8 md:mb-10">
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">CityPups: Design Sprint</h1>
-          </div>
-          <div className="flex justify-center">
-            <img src={heroPreview} alt="CityPups preview" className="w-full max-w-3xl h-auto" />
-          </div>
-        </div>
-      </section>
+      <ProjectHero
+        title="CityPups:"
+        subtitle="Design Sprint"
+        image={heroPreview}
+        imageAlt="CityPups hero image"
+        background1={backgroundHalfCircle}
+        background2={backgroundDots}
+      />
 
       {/* Logistics */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-8 md:py-10">
-          <p className="text-sm text-slate-500 mb-3">Logistics</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2 text-center md:text-left">Sprint</h3>
-              <ul className="list-disc list-inside text-slate-700 text-center md:text-left">
-                <li>5‑day Google Ventures design sprint</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2 text-center md:text-left">My Role</h3>
-              <ul className="list-disc list-inside text-slate-700 text-center md:text-left">
-                <li>UI/UX Designer</li>
-              </ul>
-            </div>
+      <ProjectItem title="Logistics">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:auto-rows-auto">
+          {/* Row 1 */}
+          <div>
+            <h3 className="text-xl font-semibold text-slate-900 mb-2">
+              Timeline
+            </h3>
+            <ul className="list-disc list-inside inline-block text-left text-slate-700">
+              <li>
+                October 17 - October 21 (5 day design sprint)
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-slate-900 mb-2">My Role</h3>
+            <ul className="list-disc list-inside inline-block text-left text-slate-700">
+              <li>UI/UX Designer</li>
+            </ul>
           </div>
         </div>
-      </section>
+      </ProjectItem>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
+      {/* Problem */}
+      <ProjectItem title="Problem">
+        <p className="font-bold text-center">
+          CityPups is a new startup that want to help people living in cities find the perfect dog to adopt. Their research shows that people living in cities struggle to find the right dog to adopt due to their unique needs such as living spaces, etc.
+        </p>
+      </ProjectItem>
 
-      {/* Background / Goal */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8 py-8 md:py-12 space-y-4">
-          <p className="text-sm text-slate-500">Background</p>
-          <p className="text-slate-700">
-            CityPups is a design sprint focused on helping busy city residents find, learn about, and adopt dogs efficiently. We aimed to
-            quickly define the experience, learn from competitive patterns, and validate a prototype with users at the end of the week.
-          </p>
-        </div>
-      </section>
+      <hr className="border-slate-400" />
+      {/* Constraints */}
+      <ProjectItem title="Constraints">
+        <ul className="list-disc list-inside inline-block text-left">
+          <li>The solution should be designed as a website/designed for those with larger screens (desktop & laptop).</li>
+          <li>CityPups aggregates adoption dogs from local organizations and shelters. Once a user decides to adopt, they get sent to a third-party contact to start the process. </li>
+          <li>Focus on finding users the right dog to adopt. </li>
+        </ul>
+      </ProjectItem>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
+      {/* Solution */}
+      <ProjectItem title="Solution">
+        <p className="font-bold text-center">
+          A dynamic website that tailors dog recommendations based off of user feedback is key.
+        </p>
+      </ProjectItem>
 
+      <hr className="border-slate-400" />
       {/* Day 1: Understand / Map */}
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8 py-8 md:py-12 space-y-6">
           <h2 className="text-center text-xl md:text-2xl font-semibold text-slate-900">Day 1: Understand / Map</h2>
-          <div className="flex justify-center"><img src={endToEndMap} alt="End‑to‑end map" className="w-full max-w-4xl rounded-xl ring-1 ring-slate-200/60" /></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex justify-center"><img src={persona} alt="Persona" className="w-full max-w-md rounded-xl ring-1 ring-slate-200/60" /></div>
-            <div className="flex justify-center"><img src={stickies} alt="Notes & stickies" className="w-full max-w-md rounded-xl ring-1 ring-slate-200/60" /></div>
+          <p className="text-center">
+            On day 1 of this design sprint, we were first given several user interviews regarding their pain points and desires for a solution to help them find the right dog. While not required for the design sprint- I took the initiative to make an affinity map summarizing the themes I took away from the user interviews and usability test to help me better understand the target audience.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
+
+            <div className="flex justify-center"><img src={stickies} alt="Notes & stickies" className="w-full max-w-4xl rounded-xl ring-1 ring-slate-200/60" /></div>
+            <p className="text-center">
+              We were then give a persona for the project that summarizes all of the users pain points and goals.
+            </p>
+            <div className="flex justify-center"><img src={persona} alt="Persona" className="w-full max-w-4xl rounded-xl ring-1 ring-slate-200/60" /></div>
+            <p className="text-center">
+              From there, I made an end-to-end map of a possible solution to this problem
+            </p>
+            <div className="flex justify-center"><img src={endToEndMap} alt="End‑to‑end map" className="w-full max-w-4xl rounded-xl ring-1 ring-slate-200/60" /></div>
           </div>
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       {/* Day 2: Sketch */}
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8 py-8 md:py-12 space-y-6">
           <h2 className="text-center text-xl md:text-2xl font-semibold text-slate-900">Day 2: Sketch</h2>
-          <div className="flex justify-center"><img src={comp} alt="Competitor inspiration" className="w-full max-w-4xl rounded-xl ring-1 ring-slate-200/60" /></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex justify-center"><img src={sketch} alt="Concept sketches" className="w-full max-w-md rounded-xl ring-1 ring-slate-200/60" /></div>
-            <div className="flex justify-center"><img src={solutionSketch} alt="Solution sketch" className="w-full max-w-md rounded-xl ring-1 ring-slate-200/60" /></div>
+          <p className="text-center">
+            On day 2 of the design sprint, I started off conducting a lightning demo on existing websites in order to get ideas and inspiration. The 3 websites I chose were "Adopt a Pet", "PetFinder", and "BeDallas90".           </p>
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
+            <div className="flex justify-center"><img src={comp} alt="Competitor inspiration" className="w-full max-w-4xl rounded-xl ring-1 ring-slate-200/60" /></div>
+            <div className="flex justify-center"><img src={sketch} alt="Concept sketches" className="w-full max-w-4xl rounded-xl ring-1 ring-slate-200/60" /></div>
+            <div className="flex justify-center"><img src={solutionSketch} alt="Solution sketch" className="w-full max-w-4xl rounded-xl ring-1 ring-slate-200/60" /></div>
           </div>
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       {/* Day 3: Storyboarding */}
       <section className="bg-white">
@@ -100,7 +123,7 @@ export default function CityPupsProject() {
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       {/* Day 4: Prototyping */}
       <section className="bg-white">
@@ -111,7 +134,7 @@ export default function CityPupsProject() {
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       {/* Day 5: Validate */}
       <section className="bg-white">
@@ -122,7 +145,7 @@ export default function CityPupsProject() {
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       {/* Final Screens */}
       <section className="bg-white">
@@ -132,7 +155,7 @@ export default function CityPupsProject() {
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       {/* Conclusion */}
       <section className="bg-white">
@@ -142,7 +165,7 @@ export default function CityPupsProject() {
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       {/* Footer spacer + back */}
       <div className="bg-white h-6" />
