@@ -1,7 +1,6 @@
 import portraitFallback from '../assets/home-page/clara-pencil-portrait.png'
 import Timeline from '../components/Timeline'
-import { CodeIcon } from '../utils/icons'
-import { HOME_NAME_LABEL, HOME_PORTRAIT_ALT, HOME_PAGE_TITLE, HOME_PAGE_SUBTITLE } from '../utils/Constants'
+import { HOME_PORTRAIT_ALT, HOME_PAGE_TITLE, HOME_PAGE_SUBTITLE } from '../utils/Constants'
 import PortfolioSection from '../components/Portfolio'
 
 export default function Home() {

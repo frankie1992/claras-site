@@ -154,6 +154,6 @@ export const PORTFOLIO_PROJECTS_LIST: ProjectDetails[] = [
     description:
       'A 5‑day Google Ventures design sprint creating a dog adoption site for busy city individuals through rapid prototyping and iteration.',
     imageSrc: cityPups,
-    projectLink: '#',
+    projectLink: '/projects/citypups',
   },
 ]

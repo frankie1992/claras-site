@@ -5,6 +5,7 @@ import About from './pages/About'
 import NotFound from './pages/NotFound'
 import UBYouProject from './pages/projects/UBYou'
 import GatherlyProject from './pages/projects/Gatherly'
+import CityPupsProject from './pages/projects/CityPups'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -12,6 +13,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="projects/ubyou" element={<UBYouProject />} />
       <Route path="projects/gatherly" element={<GatherlyProject />} />
+      <Route path="projects/citypups" element={<CityPupsProject />} />
       <Route path="about" element={<About />} />
       <Route path="*" element={<NotFound />} />
     </Route>
