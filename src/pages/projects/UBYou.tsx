@@ -109,7 +109,10 @@ export default function UBYouProject() {
           Prior to redesigning the user interface, our team conducted competitor analysis and developed user stories to help guide our designs and identify pain points. Our group was also provided with previously conducted research to lay the foundation for our work.
         </h2>
         <span>
-          Previous research provided from our client highlighted several important pain points of users:
+          <div className='text-center my-6'>
+            Previous research provided from our client highlighted several important pain points of users:
+          </div>
+
           <ul className="list-disc pl-5 space-y-2 ">
             <li>
               Some users stated in reviews that the application felt disorganized and overwhelming
@@ -122,21 +125,23 @@ export default function UBYouProject() {
             </li>
           </ul>
         </span>
-        <span>
+        <div className='text-center my-6'>
           Competitive analysis included applications such as Duolingo, Calm/Headspace, and You at College. Unique features we identified that could help us improve UBYou were:
+        </div>
+        <div>
           <ul className="list-disc pl-5 space-y-2 ">
             <li>
-              Gamification: Features that help improve engagement from users such as streaks, personalized flows, and activity recommendations were elements that we wanted to bring in to our re-design.
+              <strong>Gamification:</strong> Features that help improve engagement from users such as streaks, personalized flows, and activity recommendations were elements that we wanted to bring in to our re-design.
             </li>
             <li>
-              Personalization: Taking inspiration from Calm and Headspace, we wanted to provide recommended activities for the user to complete and feel that the application is unique to them.
+              <strong>Personalization:</strong> Taking inspiration from Calm and Headspace, we wanted to provide recommended activities for the user to complete and feel that the application is unique to them.
             </li>
             <li>
-              Simple flows: Important feedback from previous users were that some user flows were overwhelming. We wanted to take a minimalistic approach as a result of this drawing inspiration from Calm and Headspace.
+              <strong>Simple flows:</strong> Important feedback from previous users were that some user flows were overwhelming. We wanted to take a minimalistic approach as a result of this drawing inspiration from Calm and Headspace.
             </li>
           </ul>
-        </span>
-        <div className="flex justify-center">
+        </div>
+        <div className="flex justify-center my-4">
           <img src={competitorAnalysis} alt="Competitor analysis screenshots" className="w-full max-w-5xl h-auto rounded-xl shadow-sm" />
         </div>
         <span>
@@ -155,15 +160,15 @@ export default function UBYouProject() {
           Based off of our research and client goals, we developed a site map and 2 important red routes to lay the foundation for an
           application design.
         </h2>
-        <div className="flex justify-center">
-          <img src={siteMapOld} alt="UBYou site map" className="w-full max-w-5xl h-auto rounded-xl shadow-sm ring-1 ring-slate-200/60" />
+        <div className="flex justify-center my-4">
+          <img src={siteMapOld} alt="UBYou site map" className="w-full max-w-5xl h-auto " />
         </div>
         <div className="grid grid-cols-1 gap-8 mt-4">
           <div className="flex justify-center">
-            <img src={siteMapNew1} alt="Red route 1 user flow" className="w-full max-w-5xl h-auto rounded-xl shadow-sm ring-1 ring-slate-200/60" />
+            <img src={siteMapNew1} alt="Red route 1 user flow" className="w-full max-w-5xl h-auto " />
           </div>
           <div className="flex justify-center">
-            <img src={siteMapNew2} alt="Red route 2 user flow" className="w-full max-w-5xl h-auto rounded-xl shadow-sm ring-1 ring-slate-200/60" />
+            <img src={siteMapNew2} alt="Red route 2 user flow" className="w-full max-w-5xl h-auto " />
           </div>
         </div>
       </ProjectItem>
@@ -175,10 +180,16 @@ export default function UBYouProject() {
         <h2 className="text-center font-bold">
           Following solidifying the information architecture, we developed low-fidelity wireframes to help further redesign the application.
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <img src={wireframe1} alt="Wireframe 1" className="w-full max-w-md h-auto rounded-xl ring-1 ring-slate-200/60" />
-          <img src={wireframe2} alt="Wireframe 2" className="w-full max-w-md h-auto rounded-xl ring-1 ring-slate-200/60" />
-          <img src={wireframe3} alt="Wireframe 3" className="w-full max-w-md h-auto rounded-xl ring-1 ring-slate-200/60" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="flex justify-center my-4">
+            <img src={wireframe1} alt="Wireframe 1" className="w-full max-w-md h-auto" />
+          </div>
+          <div className="flex justify-center my-4">
+            <img src={wireframe2} alt="Wireframe 2" className="w-full max-w-md h-auto" />
+          </div>
+          <div className="flex justify-center my-4">
+            <img src={wireframe3} alt="Wireframe 3" className="w-full max-w-md h-auto" />
+          </div>
         </div>
       </ProjectItem>
 
@@ -189,13 +200,12 @@ export default function UBYouProject() {
         <h2 className="text-center font-bold">
           As a group, we collectively decided on a cohesive design system to implement on the wireframes in preparation for hi-fidelity designs.
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <img src={designColors} alt="Color palette and neutrals" className="w-full max-w-lg h-auto rounded-xl ring-1 ring-slate-200/60" />
-        </div>
-        <div className="flex justify-center mt-6">
-          <img src={designComponents} alt="UI components and tokens" className="w-full max-w-5xl h-auto rounded-xl ring-1 ring-slate-200/60" />
-          <img src={designFont} alt="Typography scale and notes" className="w-full max-w-lg h-auto rounded-xl ring-1 ring-slate-200/60" />
-
+        <div className="items-center justify-center self-center mt-6 grid grid-cols-2 gap-6 ">
+          <div className="flex w-full h-auto col-span-2 justify-center">
+            <img src={designColors} alt="Color palette and neutrals" className=" lg:max-w-lg md:max-w-md sm:max-w-sm h-auto col-span-2" />
+          </div>
+          <img src={designComponents} alt="UI components and tokens" className="w-full max-w-5xl h-auto" />
+          <img src={designFont} alt="Typography scale and notes" className="w-full max-w-lg h-auto" />
         </div>
       </ProjectItem>
 
@@ -215,10 +225,22 @@ export default function UBYouProject() {
 
 
       <ProjectItem title="Challenges and Lessons Learned">
-        <ul className="list-disc pl-5 space-y-2 ">
-          <li>Due to time constraints, we were not able to conduct formal user testing.</li>
-          <li>We attempted to take on too much of the app and had to cut flows to meet deadlines.</li>
-          <li>We learned valuable lessons about project scope and realistic expectations.</li>
+        <p>
+          There were several challenges that we faced collectively as a group throughout this project.
+        </p>
+        <ul className="list-disc pl-5 pt-2 ">
+          <li>
+            Due to time constraints, we were not able to conduct formal user testing. Instead, we based our iterations and designs on the client's feedback while adhering to best practices.
+          </li>
+          <li>
+            We also attempted to take on a larger portion of the application but quickly realized that we would not be able to finish within the given timeframe. As a result, we had to cut out two other user flows that were quite complex.
+          </li>
+          <li>
+            These were valuable lessons to learn in a real-world project, given the nature of having deadlines to meet and delivering work that fits within specific project requirements.
+          </li>
+          <li>
+            Going forward, I've learned that it's extremely important to set realistic expectations for both the team and the client in order to produce quality work and fulfill project requirements.
+          </li>
         </ul>
       </ProjectItem>
 
@@ -227,8 +249,8 @@ export default function UBYouProject() {
 
       <ProjectItem title="Next Steps">
         <p className="">
-          The next steps for UBYou include pushing these designs into production, and conducting formal user testing to iterate. They will also A/B test our versions to see which improves engagement before rolling out.
-        </p>
+          The next steps for UBYou include pushing these designs into production on the software side, and conducting formal user testing to iterate on our designs for further improvements. They will conduct A/B testing of our different versions to see which one yields improved user engagement before rolling out into final production.
+          Thank you so much to UBYou for allowing us to help redesign your application.        </p>
         <h3 className="text-center font-bold">
           Thank you so much to UBYou for allowing us to help redesign your application.
         </h3>

@@ -6,7 +6,7 @@ import backgroundPurpleDots from '../assets/home-page/background-purple-dots.svg
 import backgroundStars from '../assets/home-page/background-stars.svg'
 
 export default function PortfolioSection() {
-  const toTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+  
 
   return (
     <section id="portfolio" className="relative">
@@ -34,16 +34,7 @@ export default function PortfolioSection() {
         </div>
       </div>
 
-      {/* Back to top button */}
-      <button
-        onClick={toTop}
-        aria-label="Back to top"
-        className="fixed bottom-6 right-6 z-40 inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-white shadow-md hover:bg-slate-800"
-      >
-        <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-          <path d="m18 15-6-6-6 6" />
-        </svg>
-      </button>
+      
     </section>
   )
 }

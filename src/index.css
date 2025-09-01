@@ -22,8 +22,8 @@
   --bg-base: #f4fadf; /* pale lime */
   background-color: var(--bg-base);
   background-image:
-    radial-gradient(45% 40% at 28% 62%, rgba(139, 92, 246, 0.35) 0%, rgba(139, 92, 246, 0) 60%), /* purple */
-    radial-gradient(42% 45% at 42% 52%, rgba(59, 130, 246, 0.33) 0%, rgba(59, 130, 246, 0) 55%),  /* blue */
-    radial-gradient(36% 36% at 62% 22%, rgba(236, 72, 153, 0.32) 0%, rgba(236, 72, 153, 0) 60%);  /* pink */
+    radial-gradient(35% 80% at 38% 40%, rgba(139, 92, 246, 0.35) 0%, rgba(139, 92, 246, 0) 100%), /* purple */
+    radial-gradient(42% 45% at 42% 32%, rgba(59, 130, 246, 0.33) 0%, rgba(59, 130, 246, 0) 60%),  /* blue */
+    radial-gradient(36% 36% at 52% 20%, rgba(236, 72, 153, 0.32) 0%, rgba(236, 72, 153, 0) 100%);  /* pink */
   background-repeat: no-repeat;
 }
