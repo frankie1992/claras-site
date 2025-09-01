@@ -43,7 +43,6 @@ export default function App() {
       <main className="container mx-auto flex-1">
         <Outlet />
       </main>
-
       <Footer />
     </div>
   )

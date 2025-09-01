@@ -38,7 +38,7 @@ export default function ProjectHero({
           src={background1}
           alt=""
           aria-hidden
-          className="hidden md:block pointer-events-none select-none absolute right-6 bottom-6 w-28 lg:w-40 opacity-80 -z-10"
+          className="hidden md:block pointer-events-none select-none absolute right-6 bottom-6 w-28 lg:w-40 opacity-80"
           loading="lazy"
         />
       )}
@@ -47,12 +47,12 @@ export default function ProjectHero({
           src={background2}
           alt=""
           aria-hidden
-          className="hidden md:block pointer-events-none select-none absolute left-6 top-6 w-24 lg:w-36 opacity-60 -z-10"
+          className="hidden md:block pointer-events-none select-none absolute left-6 top-6 w-24 lg:w-36 opacity-60"
           loading="lazy"
         />
       )}
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-12 md:py-16">
+      <div className="relative mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-12 md:py-16">
         <div className="text-center mb-8 md:mb-10">
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
             <span>{title}</span>

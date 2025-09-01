@@ -30,7 +30,7 @@ export default function Header() {
     ].join(' ')
 
   return (
-    <header className="w-full border-b bg-white">
+    <header className="w-full border-b bg-white border-slate-300">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="h-16 grid grid-cols-[auto_1fr_auto] items-center">
           <NavLink to="/" className="text-xl font-semibold text-slate-900">

@@ -3,7 +3,7 @@ import { HeartIcon } from '../utils/icons'
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-lime-50/60">
+    <footer className="border-t border-slate-300">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-3 flex flex-col md:flex-row items-center justify-center md:justify-between text-sm">
         <div className="inline-flex items-center gap-2 text-rose-600 md:mb-0 mb-1">
           <HeartIcon className="size-4" />

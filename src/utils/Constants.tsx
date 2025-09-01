@@ -2,9 +2,8 @@ import { DnaIcon } from './icons'
 import type { ComponentType } from 'react'
 import { PaletteIcon, type IconProps, StethoscopeIcon } from './icons'
 import cityPups from '../assets/home-page/cityPups.png'
-import ubYou from '../assets/home-page/ubYou.png'
+import ubYou from '../assets/projects/ubyou/ubyou-mobile.png'
 import gatherly from '../assets/home-page/gatherly.png'
-
 // Centralized user-facing copy and content constants
 // Use these in components/pages instead of hardcoded strings.
 

@@ -17,7 +17,7 @@ import designComponents from '../../assets/projects/ubyou/design-components.png'
 import UBYouFinal from '../../assets/projects/ubyou/UBYou-final.png';
 import ProjectHero from '../../components/ProjectHero';
 import ProjectItem from '../../components/ProjectItem';
-
+import backgroundTriangle from '../../assets/projects/ubyou/background-triangle.png';
 export default function UBYouProject() {
   return (
     <div className="flex flex-col min-h-[60vh]">
@@ -27,6 +27,7 @@ export default function UBYouProject() {
         image={heroMobiles}
         imageAlt="UBYou redesigned mobile screens"
         background1={backgroundCross}
+        background2={backgroundTriangle}
       />
 
       <ProjectItem title="Logistics">
