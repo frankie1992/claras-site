@@ -22,7 +22,8 @@ export default function UBYouProject() {
   return (
     <div className="flex flex-col min-h-[60vh]">
       <ProjectHero
-        title="UBYou: Mental Wellness for College Students"
+        title="UBYou:"
+        subtitle="Mental Wellness for College Students"
         image={heroMobiles}
         imageAlt="UBYou redesigned mobile screens"
         background1={backgroundCross}
@@ -31,17 +32,23 @@ export default function UBYouProject() {
       <ProjectItem title="Logistics">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:auto-rows-auto">
           <div>
-            <h2 className="text-3xl">Timeline</h2>
+            <h2 className="text-3xl">
+              Timeline
+            </h2>
             <ul className="list-disc list-inside inline-block text-left">
-              <li>January – February 2025</li>
+              <li>
+                January - February 2025
+              </li>
             </ul>
           </div>
           <div>
-            <h2 className="text-3xl">Team</h2>
+            <h2 className="text-3xl">
+              Team
+            </h2>
             <ul className="list-disc list-inside inline-block text-left">
               <li>2 UX Design Leads</li>
               <li>3 UX Designers</li>
-              <li>+ CEO</li>
+              <li>CEO</li>
             </ul>
           </div>
           <div>
