@@ -74,6 +74,29 @@ export default function ContactButton() {
                   />
                 </div>
               </form>
+              {/* Pixel heart */}
+              <div className="py-6 flex justify-center" aria-hidden>
+                <svg
+                  className="w-10 h-10"
+                  viewBox="0 0 10 9"
+                  shape-rendering="crispEdges"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* red pixels */}
+                  <rect x="2" y="1" width="2" height="1" fill="#ef4444"/>
+                  <rect x="6" y="1" width="2" height="1" fill="#ef4444"/>
+                  <rect x="1" y="2" width="4" height="1" fill="#ef4444"/>
+                  <rect x="5" y="2" width="4" height="1" fill="#ef4444"/>
+                  <rect x="0" y="3" width="10" height="1" fill="#ef4444"/>
+                  <rect x="0" y="4" width="10" height="1" fill="#ef4444"/>
+                  <rect x="1" y="5" width="8" height="1" fill="#ef4444"/>
+                  <rect x="2" y="6" width="6" height="1" fill="#ef4444"/>
+                  <rect x="3" y="7" width="4" height="1" fill="#ef4444"/>
+                  <rect x="4" y="8" width="2" height="1" fill="#ef4444"/>
+                  {/* tiny highlight */}
+                  <rect x="2" y="2" width="1" height="1" fill="#fde68a"/>
+                </svg>
+              </div>
 
               {/* Footer */}
               <div className="px-6 py-3 bg-violet-100 flex justify-end gap-2">
