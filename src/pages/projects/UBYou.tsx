@@ -26,9 +26,9 @@ export default function UBYouProject() {
           src={backgroundCross}
           alt=""
           aria-hidden
-          className="hidden md:block pointer-events-none select-none absolute right-8 top-10 w-24 opacity-80"
+          className="hidden md:block pointer-events-none select-none absolute right-6 bottom-6 w-28 lg:w-40 opacity-80 -z-10"
         />
-        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-12 md:py-16">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-12 md:py-16">
           <div className="text-center mb-8 md:mb-10">
             <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900">
               <div>UBYou:</div>
@@ -44,19 +44,23 @@ export default function UBYouProject() {
 
       {/* Logistics */}
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-8 md:py-10">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-6 md:py-8">
           <p className="text-sm text-slate-500 mb-3">Logistics</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:auto-rows-auto">
             {/* Row 1 */}
             <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">Timeline</h3>
-              <ul className="list-disc list-inside inline-block text-left text-slate-700">
+              <h2 className="text-3xl">
+                Timeline
+              </h2>
+              <ul className="list-disc list-inside inline-block text-left">
                 <li>January – February 2025</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">Team</h3>
-              <ul className="list-disc list-inside inline-block text-left text-slate-700">
+              <h2 className="text-3xl">
+                Team
+              </h2>
+              <ul className="list-disc list-inside inline-block text-left">
                 <li>2 UX Design Leads</li>
                 <li>3 UX Designers</li>
                 <li>+ CEO</li>
@@ -64,13 +68,17 @@ export default function UBYouProject() {
             </div>
             {/* Row 2 */}
             <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">Project Type</h3>
-              <ul className="list-disc list-inside inline-block text-left text-slate-700">
+              <h2 className="text-3xl">
+                Project Type
+              </h2>
+              <ul className="list-disc list-inside inline-block text-left">
                 <li>Internship</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">My Role</h3>
+              <h2 className="text-3xl">
+                My Role
+              </h2>
               <ul className="list-disc list-inside inline-block text-left text-slate-700">
                 <li>UI/UX Designer</li>
               </ul>
@@ -79,7 +87,7 @@ export default function UBYouProject() {
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       {/* Background / Company Context */}
       <section className="bg-white">
@@ -93,7 +101,7 @@ export default function UBYouProject() {
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
 
 
@@ -111,10 +119,10 @@ export default function UBYouProject() {
           </div>
         </div>
       </section>
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
       {/* Solution */}
       <section className="bg-white relative">
-        
+
 
         <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8 py-8 md:py-12">
           <p className="text-sm text-slate-500 mb-2">Solution</p>
@@ -129,7 +137,7 @@ export default function UBYouProject() {
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       {/* Research and Discovery */}
       <section className="bg-white">
@@ -169,12 +177,12 @@ export default function UBYouProject() {
 
           {/* User stories table */}
           <div className="flex justify-center">
-            <img src={researchTable} alt="User stories summary table" className="w-full max-w-5xl h-auto rounded-xl border border-slate-200" />
+            <img src={researchTable} alt="User stories summary table" className="w-full max-w-5xl h-auto rounded-xl border border-slate-400" />
           </div>
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       {/* Define */}
       <section className="bg-white">
@@ -200,7 +208,7 @@ export default function UBYouProject() {
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       {/* Design */}
       <section className="bg-white">
@@ -224,7 +232,7 @@ export default function UBYouProject() {
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       {/* Design System */}
       <section className="bg-white">
@@ -249,7 +257,7 @@ export default function UBYouProject() {
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       {/* Hi‑Fidelity Designs */}
       <section className="bg-white">
@@ -264,7 +272,7 @@ export default function UBYouProject() {
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       {/* Challenges and Lessons Learned */}
       <section className="bg-white">
@@ -280,7 +288,7 @@ export default function UBYouProject() {
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       {/* Next Steps */}
       <section className="bg-white">
@@ -293,7 +301,7 @@ export default function UBYouProject() {
         </div>
       </section>
 
-      <hr className="border-slate-200" />
+      <hr className="border-slate-400" />
 
       <div className=" bg-white h-6 text-center ">
         <Link to="/" className="text-blue-600 hover:underline">← Back to Home</Link>

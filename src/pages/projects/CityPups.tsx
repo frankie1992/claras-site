@@ -15,7 +15,7 @@ export default function CityPupsProject() {
   return (
     <div className="flex flex-col min-h-[60vh]">
       {/* Hero */}
-      <section className="relative bg-blob-gradient overflow-hidden">
+      <section className="relative overflow-hidden">
         <img src={backgroundHalfCircle} alt="" aria-hidden className="hidden md:block absolute left-[-28px] top-8 w-44 lg:w-64 pointer-events-none select-none opacity-90" />
         <img src={backgroundDots} alt="" aria-hidden className="hidden md:block absolute right-6 top-10 w-40 pointer-events-none select-none opacity-90" />
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-12 md:py-16">

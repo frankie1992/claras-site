@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import backgroundHalfCircle from '../../assets/home-page/background-half-circle.svg'
 import backgroundCross from '../../assets/projects/ubyou/background-cross.svg'
 import heroPreview from '../../assets/projects/gatherly/gatherly-mobile-preview.png'
 import competitors from '../../assets/projects/gatherly/Competitors-1.png'
@@ -20,7 +19,6 @@ export default function GatherlyProject() {
     <div className="flex flex-col min-h-[60vh]">
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <img src={backgroundHalfCircle} alt="" aria-hidden className="hidden md:block absolute left-[-28px] top-8 w-44 lg:w-64 pointer-events-none select-none opacity-90" />
         <img src={backgroundCross} alt="" aria-hidden className="hidden md:block absolute right-6 top-10 w-24 pointer-events-none select-none opacity-80" />
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-12 md:py-16">
           <div className="text-center mb-8 md:mb-10">
@@ -36,16 +34,17 @@ export default function GatherlyProject() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-8 md:py-10">
           <p className="text-sm text-slate-500 mb-3">Logistics</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:auto-rows-auto">
+            {/* Row 1 */}
             <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2 text-center md:text-left">Timeline</h3>
-              <ul className="list-disc list-inside text-slate-700 text-center md:text-left">
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Timeline</h3>
+              <ul className="list-disc list-inside inline-block text-left text-slate-700">
                 <li>October - November 2024</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2 text-center md:text-left">My Role</h3>
-              <ul className="list-disc list-inside text-slate-700 text-center md:text-left">
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">My Role</h3>
+              <ul className="list-disc list-inside inline-block text-left text-slate-700">
                 <li>UI/UX Designer</li>
               </ul>
             </div>
@@ -54,12 +53,23 @@ export default function GatherlyProject() {
       </section>
 
       <hr className="border-slate-200" />
-
       {/* Background/Company Context */}
       <section className="bg-white">
         <div className="mx-auto max-w-5xl px-4 md:px-6 lg:px-8 py-8 md:py-10">
           <p className="text-sm text-slate-500 mb-3">Background/Company Context</p>
           <p className="text-slate-700 text-center">A startup company has launched an event application that helps people meet new friends. The goal of the product is to create a social user experience that will help users get out and do activities in-person.Friends keep us company through the difficulties of our lives and help us grow, but when people move to a new city or town, fear and social anxiety can keep them from making new friends. How can we help people who have social anxiety step out and make new friends?</p>
+        </div>
+      </section>
+
+      <hr className="border-slate-200" />
+      {/* Background/Company Context */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-5xl px-4 md:px-6 lg:px-8 py-8 md:py-10">
+          <p className="text-sm text-slate-500 mb-3">
+            Problem
+          </p>
+          <p className="text-slate-700 text-center">
+            The business team has identified a problem in that the number of people who say they are going to an event is significantly higher than the actual number of people who attend.           </p>
         </div>
       </section>
 
