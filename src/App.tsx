@@ -40,7 +40,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-blob-gradient">
       <Header />
-      <main className="container mx-auto flex-1 p-6">
+      <main className="container mx-auto flex-1">
         <Outlet />
       </main>
 

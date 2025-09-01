@@ -16,17 +16,29 @@ export default function ProjectSummary({ title, subtitle, description, imageSrc,
         )}
       </div>
 
-      {/* Copy */}
       <div>
         <h3 className="text-xl md:text-2xl font-semibold text-slate-900">{title}</h3>
-        {subtitle && <p className="text-slate-500 text-sm">{subtitle}</p>}
-        {description && <p className="mt-3 text-slate-700">{description}</p>}
-        <a
-          href={projectLink}
-          className="mt-4 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-red-100 text-red-800 hover:bg-red-200 focus:outline-hidden focus:bg-red-200 disabled:opacity-50 disabled:pointer-events-none dark:text-red-500 dark:bg-red-800/30 dark:hover:bg-red-800/20 dark:focus:bg-red-800/20"
-        >
-          View Project
-        </a>
+        {subtitle && (
+          <div className="md:mt-0 mt-3">
+            <p className="text-base font-semibold text-slate-900 md:text-slate-500 md:text-sm md:font-normal">
+              {subtitle}
+            </p>
+            <div className="md:hidden border-t border-slate-200 mt-2" />
+          </div>
+        )}
+        {description && (
+          <p className="mt-3 text-slate-900 md:text-slate-700 text-base md:text-[15px] leading-relaxed">
+            {description}
+          </p>
+        )}
+        <div className="mt-6 md:mt-4 text-center md:text-left">
+          <a
+            href={projectLink}
+            className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold md:font-medium rounded-lg border border-transparent bg-red-100 text-red-800 hover:bg-red-200 focus:outline-hidden focus:bg-red-200 disabled:opacity-50 disabled:pointer-events-none dark:text-red-500 dark:bg-red-800/30 dark:hover:bg-red-800/20 dark:focus:bg-red-800/20"
+          >
+            View Project
+          </a>
+        </div>
       </div>
     </div>
   )

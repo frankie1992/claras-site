@@ -10,7 +10,7 @@ export default function Home() {
     <>
       {/* Hero – mobile layout */}
       <section className="lg:hidden mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-6 md:py-10">
-        <div className="bg-blob-gradient rounded-2xl p-5 sm:p-8">
+        <div className="rounded-2xl p-5 sm:p-8">
           {/* Intro */}
           <div className="text-center">
             <h1 className="text-3xl md:text-6xl font-extrabold tracking-tight text-slate-900">
