@@ -79,7 +79,7 @@ export default function ContactButton() {
                 <svg
                   className="w-10 h-10"
                   viewBox="0 0 10 9"
-                  shape-rendering="crispEdges"
+                  shapeRendering="crispEdges"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   {/* red pixels */}
