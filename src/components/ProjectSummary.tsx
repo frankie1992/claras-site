@@ -31,7 +31,7 @@ export default function ProjectSummary({ title, subtitle, description, imageSrc,
             {description}
           </p>
         )}
-        <div className="mt-6 md:mt-4 text-center md:text-left">
+        <div className={`mt-6 md:mt-4 text-center ${reverse ? 'md:text-right' : 'md:text-left'}`}>
           <a
             href={projectLink}
             className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold md:font-medium rounded-lg border border-transparent bg-red-100 text-red-800 hover:bg-red-200 focus:outline-hidden focus:bg-red-200 disabled:opacity-50 disabled:pointer-events-none dark:text-red-500 dark:bg-red-800/30 dark:hover:bg-red-800/20 dark:focus:bg-red-800/20"
