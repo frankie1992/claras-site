@@ -59,7 +59,6 @@ export default function GatherlyProject() {
         </p>
       </ProjectItem>
 
-
       <hr className="border-slate-400" />
       {/* Problem */}
       <ProjectItem title="Problem">
