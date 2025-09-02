@@ -1,5 +1,4 @@
 import {
-  CONTACT_BUTTON_LABEL,
   CONTACT_MODAL_TITLE,
   CONTACT_EMAIL_LABEL,
   CONTACT_EMAIL_PLACEHOLDER,
@@ -8,18 +7,18 @@ import {
   CONTACT_SEND_BUTTON,
 } from '../utils/Constants'
 import { XIcon } from '../utils/icons'
-import { isValidEmail } from '../utils/utils'
 
 export default function ContactButton() {
     return (
       <div>
-        <button
+        {/* not dev complete */}
+        {/* <button
           type="button"
           data-hs-overlay="#hs-basic-modal"
           className="hidden md:inline-flex py-1.5 px-3 items-center gap-x-2 text-sm font-medium text-nowrap rounded-xl border border-transparent bg-rose-500 text-white hover:bg-rose-600 focus:outline-hidden transition disabled:opacity-50 disabled:pointer-events-none"
         >
           {CONTACT_BUTTON_LABEL}
-        </button>
+        </button> */}
 
         <div
           id="hs-basic-modal"

@@ -13,13 +13,12 @@ import { LeafIcon } from '../utils/icons'
 
 export default function About() {
   return (
-    <>
-    <section className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-12 md:py-16">
+    <section className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 pt-12 md:pt-16">
       <h1 className="text-center text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-10 md:mb-14">
         {ABOUT_PAGE_TITLE}
       </h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start ">
         <div className="relative w-full max-w-lg mx-auto lg:mx-0">
           <div className="absolute -inset-6 rounded-[48px] bg-gradient-to-br from-fuchsia-300/40 via-sky-300/30 to-emerald-200/40 blur-2xl -z-10" />
           <img
@@ -48,15 +47,14 @@ export default function About() {
           </div>
         </div>
       </div>
-    </section>
-    {/* Full‑bleed white strip with repeating flower washi */}
-    <div className="bg-white mx-[calc(50%-50vw)] w-screen">
+          {/* Full‑bleed white strip with repeating flower washi */}
+    <div className="mt-[calc(0%+8vw)] mx-[calc(50%-51vw)] w-screen overflow-hidden">
       <div
         className="h-10 bg-repeat-x bg-center"
         style={{ backgroundImage: `url(${flowerWashi})`, backgroundSize: 'auto 100%' }}
         aria-hidden
       />
     </div>
-    </>
+    </section>
   )
 }
