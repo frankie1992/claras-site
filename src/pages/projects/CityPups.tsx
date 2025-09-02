@@ -37,9 +37,6 @@ const options = {
   wasmUrl: '/wasm/',
 };
 
-const resizeObserverOptions = {};
-
-
 type PDFFile = string | File | null;
 
 export default function CityPupsProject() {

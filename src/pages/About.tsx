@@ -1,6 +1,7 @@
 import portrait from '../assets/about-page/clara-portrait.png'
 import flowerWashi from '../assets/about-page/flower-washitape.svg'
 import linkdn from '../assets/about-page/linkdln.png'
+import gmail from '../assets/about-page/google-mail.png'
 import {
   ABOUT_PAGE_TITLE,
   ABOUT_INTRO_LINE,
@@ -54,7 +55,15 @@ export default function About() {
         <img
             src={linkdn}
             alt="linkdn"
-            className="justify-center w-10"
+            className="justify-center w-10 h-10"
+            draggable={false}
+          />
+          </a>
+          <a href="mailto:claraolivapersonal@gmail.com">
+        <img
+            src={gmail}
+            alt="gmail"
+            className="justify-center w-10 h-10"
             draggable={false}
           />
           </a>
