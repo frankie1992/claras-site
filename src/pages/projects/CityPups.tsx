@@ -37,8 +37,6 @@ const options = {
   wasmUrl: '/wasm/',
 };
 
-type PDFFile = string | File | null;
-
 export default function CityPupsProject() {
     const [numPages, setNumPages] = useState<number>();
     function onDocumentLoadSuccess({ numPages: nextNumPages }: PDFDocumentProxy): void {
