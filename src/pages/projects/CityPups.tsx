@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom'
 import backgroundHalfCircle from '../../assets/home-page/background-full-circle.png'
 import backgroundArrows from '../../assets/projects/cityPups/background-1.svg'
@@ -23,6 +23,7 @@ import { pdfjs, Document, Page } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 import cityPuppdf from '../../assets/projects/cityPups/CityPups.pdf'
+import useContainerDimensions from '../../hooks/useContainerDimensions';
 
 import type { PDFDocumentProxy } from 'pdfjs-dist';
 
@@ -38,8 +39,10 @@ const options = {
 };
 
 export default function CityPupsProject() {
-    const [numPages, setNumPages] = useState<number>();
-    function onDocumentLoadSuccess({ numPages: nextNumPages }: PDFDocumentProxy): void {
+  const [numPages, setNumPages] = useState<number>();
+  const componentRef = useRef<HTMLDivElement | null>(null);
+  const { width } = useContainerDimensions(componentRef)
+  function onDocumentLoadSuccess({ numPages: nextNumPages }: PDFDocumentProxy): void {
     setNumPages(nextNumPages);
   }
 
@@ -185,15 +188,20 @@ export default function CityPupsProject() {
           <p className="text-center">
             For the final day of the design sprint, we were tasked with interviewing 5 users to test the functionality of our prototype as well as share their thoughts and any feedback they have on their experience. Below I have attached the script I used for my participants
           </p>
-          <div className='border'>
-                  <Document file={cityPuppdf} onLoadSuccess={onDocumentLoadSuccess} options={options}>
-            {Array.from(new Array(numPages), (_el, index) => (
-              <Page
-                key={`page_${index + 1}`}
-                pageNumber={index + 1}
-              />
-            ))}
-          </Document>
+          <div className='border' ref={componentRef}>
+            <Document
+              file={cityPuppdf}
+              onLoadSuccess={onDocumentLoadSuccess}
+              options={options}
+            >
+              {Array.from(new Array(numPages), (_el, index) => (
+                <Page
+                  key={`page_${index + 1}`}
+                  pageNumber={index + 1}
+                  width={width - 80}
+                />
+              ))}
+            </Document>
           </div>
           <div className="mx-auto  w-full" />
           <p className="text-slate-700 text-center">
@@ -219,7 +227,7 @@ export default function CityPupsProject() {
       {/* Conclusion */}
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8 py-8 md:py-12 space-y-4">
-        <div className="flex justify-center"><img src={Conclusion} alt="Final CityPups screen" className="w-full max-w-4xl" /></div>
+          <div className="flex justify-center"><img src={Conclusion} alt="Final CityPups screen" className="w-full max-w-4xl" /></div>
           <p className="text-slate-700 text-center">
             This was my first ever design sprint! 🥳 I tried my best to stay true to the deadlines during this activity in order for it to feel as true to an actual sprint, and it was a great challenge to make me think faster about design choices, iterate quickly, and prototype efficiently. If I had more time to work on this design sprint- I would have iterated earlier on in the process (more than likely around the storyboard activity) in order to come up with a more polished product to present during usability testing.
           </p>
