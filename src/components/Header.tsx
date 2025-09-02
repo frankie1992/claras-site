@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef  } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import ContactButton from './ContactButton'
 import { HeartIcon, BriefcaseIcon, InfoIcon, MenuIcon, XIcon } from '../utils/icons'
@@ -12,22 +12,45 @@ import {
   NAV_MOBILE_ABOUT_LABEL,
   NAV_TOGGLE_SR_LABEL,
 } from '../utils/Constants'
+import useInViewPort from '../hooks/useInViewPort'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
   const location = useLocation()
 
+  const portfolioElement = document?.getElementById('portfolio') as HTMLElement;
+  const isPortfolioInView = useInViewPort(portfolioElement, { threshold: 0.5 });
+
   useEffect(() => {
     setOpen(false)
   }, [location.pathname])
 
-  const linkClass = ({ isActive }: { isActive: boolean }) =>
-    [
+  const linkClass = ({ isActive }: { isActive: boolean }) => {
+    return [
       'group inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-sm transition-colors',
       isActive
         ? 'bg-slate-100 text-slate-900 shadow-sm'
         : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
     ].join(' ')
+  }
+    
+    const linkClassHome = ({ isActive }: { isActive: boolean }) => {
+    return [
+      'group inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-sm transition-colors',
+      isActive && !isPortfolioInView
+        ? 'bg-slate-100 text-slate-900 shadow-sm'
+        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+    ].join(' ')
+  }
+
+  const linkClassPortfolio = ({ isActive }: { isActive: boolean }) => {
+    return [
+      'group inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-sm transition-colors',
+      isActive && isPortfolioInView
+        ? 'bg-slate-100 text-slate-900 shadow-sm'
+        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+    ].join(' ')
+  }
 
   return (
     <header className="w-full border-b bg-white border-slate-300">
@@ -39,11 +62,11 @@ export default function Header() {
 
           {/* Desktop nav (center column) */}
           <nav className="hidden md:flex items-center justify-center gap-3">
-            <NavLink to="/" end className={linkClass}>
+            <NavLink to="/" end className={linkClassHome}>
               <HeartIcon className="size-4 text-slate-500 group-hover:text-slate-700" />
               <span>{NAV_HOME_LABEL}</span>
             </NavLink>
-            <NavLink to="/#portfolio" className={linkClass}>
+            <NavLink to="/#portfolio" className={linkClassPortfolio}>
               <BriefcaseIcon className="size-4 text-slate-500 group-hover:text-slate-700" />
               <span>{NAV_PORTFOLIO_LABEL}</span>
             </NavLink>
@@ -55,7 +78,7 @@ export default function Header() {
 
           {/* Right actions (contact on desktop, hamburger on mobile) */}
           <div className="justify-self-end flex items-center">
-            <ContactButton/>
+            <ContactButton />
 
             {/* Mobile toggle */}
             <button
@@ -87,13 +110,16 @@ export default function Header() {
         }
       >
         <div className="mx-auto max-w-7xl px-4 py-2 flex flex-col gap-1">
-          <NavLink to="/" end className={linkClass}>
+          <NavLink to="/" end className={linkClassHome}>
+            <HeartIcon className="size-4 text-slate-500 group-hover:text-slate-700" />
             {NAV_MOBILE_HOME_LABEL}
           </NavLink>
-          <NavLink to="/#portfolio" className={linkClass}>
+          <NavLink to="/#portfolio" className={linkClassPortfolio}>
+            <BriefcaseIcon className="size-4 text-slate-500 group-hover:text-slate-700" />
             {NAV_MOBILE_PORTFOLIO_LABEL}
           </NavLink>
           <NavLink to="/about" className={linkClass}>
+            <InfoIcon className="size-4 text-slate-500 group-hover:text-slate-700" />
             {NAV_MOBILE_ABOUT_LABEL}
           </NavLink>
         </div>

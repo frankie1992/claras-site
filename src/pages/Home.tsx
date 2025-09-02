@@ -41,7 +41,7 @@ export default function Home() {
       </section>
 
       {/* Hero – desktop layout */}
-      <section className="sm:hidden md:block lg:block mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-10 md:py-14">
+      <section className="hidden md:block lg:block mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-10 md:py-14">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 lg:gap-8">
           {/* Portrait with selection-style frame */}
           <div className="md:col-span-1">

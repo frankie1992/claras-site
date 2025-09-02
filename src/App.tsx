@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Footer from './components/Footer'
 import Header from './components/Header'
+import { remove_hash_from_url } from './utils/utils';
 
 async function loadPreline() {
   return import('preline/dist/index.js')
@@ -33,6 +34,7 @@ export default function App() {
       if (el) {
         // Allow route paint, then scroll
         setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 0)
+        setTimeout(() => remove_hash_from_url(), 10)
       }
     }
   }, [location.hash])
