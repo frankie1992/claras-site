@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom'
 import backgroundHalfCircle from '../../assets/home-page/background-full-circle.png'
 import backgroundArrows from '../../assets/projects/cityPups/background-1.svg'
@@ -18,8 +19,35 @@ import Day3 from '../../assets/projects/cityPups/Day3.png'
 import Day4 from '../../assets/projects/cityPups/Day4.png'
 import Day5 from '../../assets/projects/cityPups/Day5.png'
 import Conclusion from '../../assets/projects/cityPups/Conclusion.png'
+import { pdfjs, Document, Page } from 'react-pdf';
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import 'react-pdf/dist/Page/TextLayer.css';
+import cityPuppdf from '../../assets/projects/cityPups/CityPups.pdf'
+
+import type { PDFDocumentProxy } from 'pdfjs-dist';
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.mjs',
+  import.meta.url,
+).toString();
+
+const options = {
+  cMapUrl: '/cmaps/',
+  standardFontDataUrl: '/standard_fonts/',
+  wasmUrl: '/wasm/',
+};
+
+const resizeObserverOptions = {};
+
+
+type PDFFile = string | File | null;
 
 export default function CityPupsProject() {
+    const [numPages, setNumPages] = useState<number>();
+    function onDocumentLoadSuccess({ numPages: nextNumPages }: PDFDocumentProxy): void {
+    setNumPages(nextNumPages);
+  }
+
   return (
     <div className="flex flex-col min-h-[60vh]">
       <ProjectHero
@@ -53,7 +81,6 @@ export default function CityPupsProject() {
           </div>
         </div>
       </ProjectItem>
-
       <hr className="border-slate-400" />
       {/* Problem */}
       <ProjectItem title="Problem">
@@ -145,8 +172,9 @@ export default function CityPupsProject() {
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8 py-8 md:py-12 space-y-4">
           <div className="flex justify-center"><img src={Day4} alt="Final CityPups screen" className="w-full max-w-4xl" /></div>
-          Youtube upload plz
-          <div className="mx-auto h-64 w-full max-w-3xl rounded-xl bg-slate-200" aria-label="Prototype placeholder" />
+          <div className="flex justify-center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qec8sGKSvJs?si=v2WDKMQnE09HYOxI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          </div>
           <p className="text-center">
             The next step of the design sprint was to create a minimum viable product prototype to test end users with. I used Figma for this portion of the sprint and took approximately about 4 hours to complete. The goal of my prototype was to address users' primary pain points and themes discovered during the research portion of the sprint. The red route of my prototype involves filling out a brief survey, comparing 2 pups, and selecting one to fill out an adoption application for.
           </p>
@@ -162,7 +190,17 @@ export default function CityPupsProject() {
           <p className="text-center">
             For the final day of the design sprint, we were tasked with interviewing 5 users to test the functionality of our prototype as well as share their thoughts and any feedback they have on their experience. Below I have attached the script I used for my participants
           </p>
-          <div className="mx-auto h-64 w-full max-w-3xl rounded-xl bg-slate-200" aria-label="Validation placeholder" />
+          <div className='border'>
+                  <Document file={cityPuppdf} onLoadSuccess={onDocumentLoadSuccess} options={options}>
+            {Array.from(new Array(numPages), (_el, index) => (
+              <Page
+                key={`page_${index + 1}`}
+                pageNumber={index + 1}
+              />
+            ))}
+          </Document>
+          </div>
+          <div className="mx-auto  w-full" />
           <p className="text-slate-700 text-center">
             My usability tests consisted of one in person interview, and 4 remote interviews.Each interview took approximately ~15 minutes to complete. All users were able to successfully complete the tasks assigned to them to do- but had some feedback on the overall appearance of the website and its functionality.
           </p>

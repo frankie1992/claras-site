@@ -1,6 +1,6 @@
 import portrait from '../assets/about-page/clara-portrait.png'
 import flowerWashi from '../assets/about-page/flower-washitape.svg'
-
+import linkdn from '../assets/about-page/linkdln.png'
 import {
   ABOUT_PAGE_TITLE,
   ABOUT_INTRO_LINE,
@@ -10,6 +10,7 @@ import {
   ABOUT_INVITE_PARAGRAPH,
 } from '../utils/Constants'
 import { LeafIcon } from '../utils/icons'
+import { FOOTER_DESIGNED_LINK_URL } from '../utils/Constants'
 
 export default function About() {
   return (
@@ -19,6 +20,7 @@ export default function About() {
       </h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start ">
+
         <div className="relative w-full max-w-lg mx-auto lg:mx-0">
           <div className="absolute -inset-6 rounded-[48px] bg-gradient-to-br from-fuchsia-300/40 via-sky-300/30 to-emerald-200/40 blur-2xl -z-10" />
           <img
@@ -46,6 +48,16 @@ export default function About() {
             <LeafIcon className="size-6 text-emerald-600" />
           </div>
         </div>
+      </div>
+      <div className="justify-center flex mt-5">
+        <a href={FOOTER_DESIGNED_LINK_URL}>
+        <img
+            src={linkdn}
+            alt="linkdn"
+            className="justify-center w-10"
+            draggable={false}
+          />
+          </a>
       </div>
           {/* Full‑bleed white strip with repeating flower washi */}
     <div className="mt-[calc(0%+8vw)] mx-[calc(50%-51vw)] w-screen overflow-hidden">
