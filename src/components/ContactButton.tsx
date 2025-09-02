@@ -8,6 +8,7 @@ import {
   CONTACT_SEND_BUTTON,
 } from '../utils/Constants'
 import { XIcon } from '../utils/icons'
+import { isValidEmail } from '../utils/utils'
 
 export default function ContactButton() {
     return (
@@ -75,7 +76,7 @@ export default function ContactButton() {
                 </div>
               </form>
               {/* Pixel heart */}
-              <div className="py-6 flex justify-center" aria-hidden>
+              <div className="bg-lime-50 py-6 flex justify-center" aria-hidden>
                 <svg
                   className="w-10 h-10"
                   viewBox="0 0 10 9"

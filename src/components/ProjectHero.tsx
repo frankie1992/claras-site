@@ -38,7 +38,7 @@ export default function ProjectHero({
           src={background1}
           alt=""
           aria-hidden
-          className="hidden md:block pointer-events-none select-none absolute right-6 bottom-6 w-28 lg:w-40 opacity-80"
+          className="hidden md:block pointer-events-none select-none absolute right-6 bottom-6 w-28 lg:w-40"
           loading="lazy"
         />
       )}
@@ -47,7 +47,7 @@ export default function ProjectHero({
           src={background2}
           alt=""
           aria-hidden
-          className="hidden md:block pointer-eventsc-none select-none absolute left-6 top-6 w-24 lg:w-36 opacity-60"
+          className="hidden md:block pointer-eventsc-none select-none absolute left-6 top-6 w-24 lg:w-36"
           loading="lazy"
         />
       )}

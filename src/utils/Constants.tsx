@@ -66,6 +66,7 @@ export const NOT_FOUND_BACK_HOME = 'Go back home'
 // Footer
 export const FOOTER_DESIGNED_BY_PREFIX = 'Designed with love by'
 export const FOOTER_DESIGNED_BY_NAME = 'Clara Oliva'
+export const FOOTER_DESIGNED_LINK_URL = 'https://www.linkedin.com/in/clara-oliva/'
 export const FOOTER_DEV_LINK_URL = 'https://github.com/frankie1992'
 export const FOOTER_DEV_LINK_LABEL = 'Developed by Francisco Miranda'
 

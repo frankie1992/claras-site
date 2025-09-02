@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import backgroundCross from '../../assets/projects/ubyou/background-cross.svg'
+import backgroundStars from '../../assets/home-page/background-stars.svg'
 import heroPreview from '../../assets/projects/gatherly/gatherly-mobile-preview.png'
 import competitors from '../../assets/projects/gatherly/Competitors-1.png'
 import swot from '../../assets/projects/gatherly/SWOT-Analysis.png'
@@ -18,6 +18,7 @@ import styleGuide from '../../assets/projects/gatherly/Style-Guide-1.png'
 import finalScreens from '../../assets/projects/gatherly/Final-Screen-1.png'
 import ProjectHero from '../../components/ProjectHero';
 import ProjectItem from '../../components/ProjectItem';
+import background1 from '../../assets/projects/gatherly/background-1.svg'
 
 export default function GatherlyProject() {
   return (
@@ -29,7 +30,8 @@ export default function GatherlyProject() {
         subtitle="An Event Application"
         image={heroPreview}
         imageAlt="Gatherly mobile screens"
-        background1={backgroundCross}
+        background1={background1}
+        background2={backgroundStars}
       />
 
       {/* Logistics */}

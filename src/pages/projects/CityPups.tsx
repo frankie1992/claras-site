@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import backgroundHalfCircle from '../../assets/home-page/background-half-circle.svg'
-import backgroundDots from '../../assets/home-page/background-purple-dots.svg'
+import backgroundHalfCircle from '../../assets/home-page/background-full-circle.png'
+import backgroundArrows from '../../assets/projects/cityPups/background-1.svg'
 import heroPreview from '../../assets/projects/cityPups/citypups-preview.png'
 import comp from '../../assets/projects/cityPups/competitors.png'
 import endToEndMap from '../../assets/projects/cityPups/end-to-end-map.png'
@@ -28,7 +28,7 @@ export default function CityPupsProject() {
         image={heroPreview}
         imageAlt="CityPups hero image"
         background1={backgroundHalfCircle}
-        background2={backgroundDots}
+        background2={backgroundArrows}
       />
 
       {/* Logistics */}
