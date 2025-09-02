@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef  } from 'react'
+import { useEffect, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import ContactButton from './ContactButton'
 import { HeartIcon, BriefcaseIcon, InfoIcon, MenuIcon, XIcon } from '../utils/icons'
