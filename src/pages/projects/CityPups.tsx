@@ -193,12 +193,14 @@ export default function CityPupsProject() {
               file={cityPuppdf}
               onLoadSuccess={onDocumentLoadSuccess}
               options={options}
+              className="pdf-document"
             >
               {Array.from(new Array(numPages), (_el, index) => (
                 <Page
                   key={`page_${index + 1}`}
                   pageNumber={index + 1}
                   width={width - 80}
+                  className="pdf-page"
                 />
               ))}
             </Document>
