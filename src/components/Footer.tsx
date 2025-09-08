@@ -18,6 +18,7 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer noopener"
           className="text-rose-600 hover:underline"
+          data-umami-event="DesignerLinkClicked"
         >
           {FOOTER_DESIGNED_BY_PREFIX} <strong> {FOOTER_DESIGNED_BY_NAME} </strong>
         </a>
@@ -28,6 +29,7 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer noopener"
           className="text-blue-600 hover:underline"
+          data-umami-event="DeveloperLinkClicked"
         >
           {FOOTER_DEV_LINK_LABEL}
         </a>

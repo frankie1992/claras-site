@@ -1,6 +1,6 @@
 import portrait from '../assets/about-page/clara-portrait.png'
 import flowerWashi from '../assets/about-page/flower-washitape.svg'
-import linkdn from '../assets/about-page/linkdln.png'
+import linkedinLogo from '../assets/about-page/linkedinLogo.png'
 import gmail from '../assets/about-page/google-mail.png'
 import {
   ABOUT_PAGE_TITLE,
@@ -51,15 +51,15 @@ export default function About() {
         </div>
       </div>
       <div className="justify-center flex mt-5">
-        <a href={FOOTER_DESIGNED_LINK_URL}>
+        <a href={FOOTER_DESIGNED_LINK_URL} data-umami-event="LinkedinClicked">
         <img
-            src={linkdn}
-            alt="linkdn"
+            src={linkedinLogo}
+            alt="linkedinLogo"
             className="justify-center w-10 h-10"
             draggable={false}
           />
           </a>
-          <a href="mailto:claraolivapersonal@gmail.com">
+          <a href="mailto:claraolivapersonal@gmail.com" data-umami-event="GmailClicked">
         <img
             src={gmail}
             alt="gmail"
